@@ -9,9 +9,10 @@
   },
   "scripts": {
     "start": "node app",
-    "test": "ava"
+    "test": "nyc ava"
   },
   "devDependencies": {
-    "ava": "^0.18.1"
+    "ava": "^0.18.1",
+    "nyc": "^10.1.2"
   }
 }
