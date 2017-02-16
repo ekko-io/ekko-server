@@ -4,6 +4,7 @@
   "dependencies": {
     "aedes": "^0.25.0",
     "figlet": "^1.2.0",
+    "shortid": "^2.2.6",
     "websocket-stream": "^3.3.3",
     "winston": "^2.3.1"
   },
