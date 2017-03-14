@@ -1,5 +1,5 @@
 nats:
-  image: nats:0.9.6
+  image: nats:latest
   ports:
     - "4222:4222"
     - "6222:6222"
@@ -8,5 +8,7 @@ mqtt:
   build: ./server
   environment:
     - APP_NAME=mqtt
+  links:
+    - nats
   ports:
     - "1883:1883"
