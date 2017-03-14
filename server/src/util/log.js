@@ -2,7 +2,7 @@ const config = require('./config');
 const Pino = require('pino');
 const pino = Pino({
   level: config.LOG_LEVEL,
-  prettyPrint: false
+  prettyPrint: config.LOG_PRETTY
 });
 
 class Logger {

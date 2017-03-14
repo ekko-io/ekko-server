@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "dependencies": {
     "aedes": "^0.25.1",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "figlet": "^1.2.0",
+    "nats": "^0.7.12",
     "pino": "^4.0.3",
-    "prettified": "^0.0.7"
+    "prettified": "^0.0.7",
+    "websocket-stream": "^3.3.3"
   },
   "scripts": {
     "start": "node src"

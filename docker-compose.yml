@@ -8,7 +8,18 @@ mqtt:
   build: ./server
   environment:
     - APP_NAME=mqtt
+    - LOG_PRETTY=false
   links:
     - nats
   ports:
     - "1883:1883"
+    - "8883:8883"
+rest:
+  build: ./server
+  environment:
+    - APP_NAME=rest
+    - LOG_PRETTY=false
+  links:
+    - nats
+  ports:
+    - "8080:8080"
