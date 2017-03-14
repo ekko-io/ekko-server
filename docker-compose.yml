@@ -1,10 +1,7 @@
-mongo:
-  image: mongo:3.0
+nats:
+  image: nats:0.9.6
   ports:
-    - "27017:27017"
-  volumes_from:
-    - mongo-data
-mongo-data:
-  image: busybox
-  volumes:
-    - /data/db
+    - "4222:4222"
+    - "6222:6222"
+    - "8222:8222"
+    
