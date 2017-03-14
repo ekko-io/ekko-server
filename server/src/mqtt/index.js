@@ -3,10 +3,9 @@ const aedes = require('aedes')();
 const config = require('../util/config');
 const net = require('net');
 const http = require('http');
-const banner = require('../util/banner');
 
-// Write banner
-banner('Ekko MQTT');
+// Logg app name.
+log.info('Ekko MQTT Server');
 
 // Start MQTT server
 net.createServer(aedes.handle).listen(config.MQTT_PORT);

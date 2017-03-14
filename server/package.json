@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "aedes": "^0.25.1",
-    "figlet": "^1.2.0",
     "pino": "^4.0.3",
     "prettified": "^0.0.7"
   },

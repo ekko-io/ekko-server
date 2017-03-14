@@ -1,7 +1,6 @@
 module.exports = {
   // Log settings
   LOG_LEVEL: process.env.LOG_LEVEL || 'info',
-  LOG_PRETTY: process.env.LOG_PRETTY || true,
 
   // Nats settings
   NATS_HOST: process.env.NATS_HOST ||  'localhost',
