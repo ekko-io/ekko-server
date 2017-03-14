@@ -4,4 +4,10 @@ nats:
     - "4222:4222"
     - "6222:6222"
     - "8222:8222"
-    
+mqtt:
+  build: ./server
+  environment:
+    - APP_NAME=mqtt
+    - LOG_PRETTY=false
+  ports:
+    - "1883:1883"

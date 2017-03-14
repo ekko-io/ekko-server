@@ -2,18 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "dependencies": {
-    "aedes": "^0.25.0",
+    "aedes": "^0.25.1",
     "figlet": "^1.2.0",
-    "shortid": "^2.2.6",
-    "websocket-stream": "^3.3.3",
-    "winston": "^2.3.1"
+    "pino": "^4.0.3",
+    "prettified": "^0.0.7"
   },
   "scripts": {
-    "start": "node app",
-    "test": "nyc ava"
-  },
-  "devDependencies": {
-    "ava": "^0.18.1",
-    "nyc": "^10.1.2"
+    "start": "node src"
   }
 }
