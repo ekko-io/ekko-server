@@ -9,6 +9,8 @@ mqtt:
   environment:
     - APP_NAME=mqtt
     - LOG_PRETTY=false
+    - NATS_HOST=nats
+    - NATS_PORT=4222
   links:
     - nats
   ports:
@@ -19,6 +21,8 @@ rest:
   environment:
     - APP_NAME=rest
     - LOG_PRETTY=false
+    - NATS_HOST=nats
+    - NATS_PORT=4222
   links:
     - nats
   ports:
