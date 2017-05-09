@@ -1,0 +1,16 @@
+CREATE TABLE "app" (
+  id VARCHAR(32) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL
+);
+
+CREATE TABLE "app_keys" (
+  key VARCHAR(64) PRIMARY KEY,
+  app_id VARCHAR(32) NOT NULL REFERENCES "app" (id),
+  name VARCHAR(255) NOT NULL,
+  access VARCHAR(16) NOT NULL,
+  channel VARCHAR(128) NOT NULL,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL
+);

@@ -1,29 +1,40 @@
-nats:
-  image: nats:latest
+#nats:
+#  image: nats:latest
+#  ports:
+#    - "4222:4222"
+#    - "6222:6222"
+#    - "8222:8222"
+#mqtt:
+#  build: ./server
+#  environment:
+#    - APP_NAME=mqtt
+#    - LOG_PRETTY=false
+#    - NATS_HOST=nats
+#    - NATS_PORT=4222
+#  links:
+#    - nats
+#  ports:
+#    - "1883:1883"
+#    - "8883:8883"
+#rest:
+#  build: ./server
+#  environment:
+#    - APP_NAME=rest
+#    - LOG_PRETTY=false
+#    - NATS_HOST=nats
+#    - NATS_PORT=4222
+#  links:
+#    - nats
+#  ports:
+#    - "8080:8080"
+postgres:
+  build: ./postgres
+  restart: always
   ports:
-    - "4222:4222"
-    - "6222:6222"
-    - "8222:8222"
-mqtt:
-  build: ./server
-  environment:
-    - APP_NAME=mqtt
-    - LOG_PRETTY=false
-    - NATS_HOST=nats
-    - NATS_PORT=4222
-  links:
-    - nats
-  ports:
-    - "1883:1883"
-    - "8883:8883"
-rest:
-  build: ./server
-  environment:
-    - APP_NAME=rest
-    - LOG_PRETTY=false
-    - NATS_HOST=nats
-    - NATS_PORT=4222
-  links:
-    - nats
-  ports:
-    - "8080:8080"
+    - "5432:5432"
+  volumes_from:
+    - data
+data:
+  image: busybox
+  volumes:
+    - /var/lib/postgresql
